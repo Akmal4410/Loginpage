@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:projects/screens/screen_login.dart';
+import 'package:projects/screens/screen_splash.dart';
+
+const LOGGEDIN_KEY = 'userLogedIn';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.teal),
-      home: LoginScreen(),
+      home: const SplashScreen(),
     );
   }
 }
