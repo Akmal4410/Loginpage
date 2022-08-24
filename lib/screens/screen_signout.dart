@@ -9,13 +9,13 @@ class SignoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Setting"),
+        title: const Text("Setting"),
         actions: [
           IconButton(
             onPressed: () {
               signOut(context);
             },
-            icon: Icon(Icons.exit_to_app),
+            icon: const Icon(Icons.exit_to_app),
           )
         ],
       ),
