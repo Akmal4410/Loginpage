@@ -18,6 +18,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final _formkey = GlobalKey<FormState>();
 
+  final userName = "user";
+  final password = "pass";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,8 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "Empty username";
-                  } else if (value != "user") {
-                    return "Invalid user";
+                  } else if (value != userName) {
+                    return "Invalid username";
                   } else {
                     return null;
                   }
@@ -68,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "Empty password";
-                  } else if (value != "pass") {
+                  } else if (value != password) {
                     return "Invalid password";
                   } else {
                     return null;
@@ -104,9 +107,9 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   getUserData(BuildContext context) async {
-    final username = _userNameController.text;
-    final password = _passwordController.text;
-    if (username == "user" && password == "pass") {
+    final _username = _userNameController.text;
+    final _password = _passwordController.text;
+    if (userName == _username && password == _password) {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool(LOGGEDIN_KEY, true);
 
@@ -117,19 +120,5 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       );
     }
-  }
-}
-
-class StatefullApp extends StatefulWidget {
-  const StatefullApp({Key? key}) : super(key: key);
-
-  @override
-  State<StatefullApp> createState() => _StatefullAppState();
-}
-
-class _StatefullAppState extends State<StatefullApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
