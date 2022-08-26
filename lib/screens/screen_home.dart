@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListView(
           children: [
             Row(
@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 15.0),
                   child: Text(
                     "Fishing Freaks",
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
                   ),
                 )
               ],
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 15.0),
                   child: Text(
                     "Dulquer Salmaan",
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
                   ),
                 )
               ],
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 15.0),
                   child: Text(
                     "Leonel Messi",
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
                   ),
                 )
               ],
