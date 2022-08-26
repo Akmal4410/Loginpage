@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 20.0),
+                      horizontal: 40.0, vertical: 15.0),
                   shape: const StadiumBorder(),
                 ),
                 child: const Text(
@@ -117,5 +117,19 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       );
     }
+  }
+}
+
+class StatefullApp extends StatefulWidget {
+  const StatefullApp({Key? key}) : super(key: key);
+
+  @override
+  State<StatefullApp> createState() => _StatefullAppState();
+}
+
+class _StatefullAppState extends State<StatefullApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
