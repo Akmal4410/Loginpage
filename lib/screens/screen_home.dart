@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:projects/screens/screen_signout.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("WhatsApp"),
+        title: const Text(
+          "WhatsApp",
+          style: TextStyle(
+            fontFamily: "Pacifico",
+            fontSize: 24,
+          ),
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -27,69 +34,68 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListView(
-          children: [
-            Row(
-              children: const [
-                CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/fishfrek.jpg"),
-                  radius: 25,
+          children: const [
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/fishfrek.jpg"),
+                radius: 25,
+              ),
+              title: Text(
+                "Fishing Freaks",
+                style: TextStyle(
+                  fontFamily: "SourceSanspro",
+                  fontSize: 20,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.0),
-                  child: Text(
-                    "Fishing Freaks",
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
-                  ),
-                )
-              ],
+              ),
             ),
-            const SizedBox(height: 20),
-            const Image(
-              image: AssetImage("assets/images/fishfrek.jpg"),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              child: Image(
+                image: AssetImage("assets/images/fishfrek.jpg"),
+              ),
             ),
-            const SizedBox(height: 20),
+
             /////////////////////////////////////////////////////////
-            Row(
-              children: const [
-                CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/dq.jpg"),
-                  radius: 25,
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/dq.jpg"),
+                radius: 25,
+              ),
+              title: Text(
+                "Dulquer Salmaan",
+                style: TextStyle(
+                  fontFamily: "SourceSanspro",
+                  fontSize: 20,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.0),
-                  child: Text(
-                    "Dulquer Salmaan",
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
-                  ),
-                )
-              ],
+              ),
             ),
-            const SizedBox(height: 20),
-            const Image(
-              image: AssetImage("assets/images/dq.jpg"),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              child: Image(
+                image: AssetImage("assets/images/dq.jpg"),
+              ),
             ),
-            const SizedBox(height: 20),
             /////////////////////////////////////////////////////////
-            Row(
-              children: const [
-                CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/messi.png"),
-                  radius: 25,
+
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/messi.png"),
+                radius: 25,
+              ),
+              title: Text(
+                "Leonel Messi",
+                style: TextStyle(
+                  fontFamily: "SourceSanspro",
+                  fontSize: 20,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 15.0),
-                  child: Text(
-                    "Leonel Messi",
-                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.w500),
-                  ),
-                )
-              ],
+              ),
             ),
-            const SizedBox(height: 20),
-            const Image(
-              image: AssetImage("assets/images/messi.png"),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              child: Image(
+                image: AssetImage("assets/images/messi.png"),
+              ),
             ),
-            const SizedBox(height: 20),
             /////////////////////////////////////////////////////////
           ],
         ),

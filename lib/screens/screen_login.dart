@@ -22,7 +22,13 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text(
+          "Login",
+          style: TextStyle(
+            fontFamily: "Pacifico",
+            fontSize: 25,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
@@ -51,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 20),
               TextFormField(
+                obscureText: true,
                 controller: _passwordController,
                 decoration: const InputDecoration(
                   labelText: "Password",
@@ -80,7 +87,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       horizontal: 40.0, vertical: 20.0),
                   shape: const StadiumBorder(),
                 ),
-                child: const Text("Login"),
+                child: const Text(
+                  "Login",
+                  style: TextStyle(
+                    fontFamily: "SourceSanspro",
+                    fontSize: 20,
+                    letterSpacing: 1,
+                  ),
+                ),
               )
             ],
           ),

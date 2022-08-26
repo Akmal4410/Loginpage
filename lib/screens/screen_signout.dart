@@ -30,7 +30,10 @@ class SignoutScreen extends StatelessWidget {
               ),
               title: Text(
                 "Mohammed Akmal",
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(
+                  fontFamily: "SourceSanspro",
+                  fontSize: 20,
+                ),
               ),
               subtitle: Text("Available"),
             ),
